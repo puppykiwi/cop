@@ -14,13 +14,20 @@ int get_length(){
     std::cin >> size;
 
     const char * type_length = typeid(size).name();
+    std::cout << type_length << std::endl ;
     
-    if ((type_length) == "int"){
-        if size > 0{
+    if ((type_length) == "i"){
+        std::cout << "test"; //debug
+        if (size > 0){
+            std::cout << "test"; //debug
             return size;
         }
         else {
-            std::cout << "Your length should be greater than 0"
+            std::cout << "Your length should be greater than 0";
         }
     }
+    else {
+        std::cout << "Please enter a valid number";
+    }
+    return 0;
 }
